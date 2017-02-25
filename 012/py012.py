@@ -11,7 +11,7 @@
 
 def filteredWords(f_file):
     fWords = []
-    with open(f_file) as f:
+    with open(f_file,encoding = 'UTF-8') as f:
         for line in f:
             fWords.append(line.strip())
     return fWords
