@@ -7,10 +7,8 @@
 # Function description
 # **第 0008 题：**一个HTML文件，找出里面的**正文**。
 
-import urllib2
 from bs4 import BeautifulSoup
 import requests
-import json
 
 
 class htmlContent(object):
@@ -29,13 +27,12 @@ class htmlContent(object):
         }
         self.content = None
 
-    def setURL(self,url):
-        self.text = requests.get(url,headers = self.headers).text
-
+    def setURL(self, url):
+        self.text = requests.get(url, headers=self.headers).text
 
     def getContent(self):
-        soup = BeautifulSoup(self.text,"html.parser")
-        self.content = soup.find('div','postBody')
+        soup = BeautifulSoup(self.text, "html.parser")
+        self.content = soup.find('div', 'postBody')
         print self.content
 
 if __name__ == "__main__":
@@ -43,4 +40,3 @@ if __name__ == "__main__":
     hc = htmlContent()
     hc.setURL(url)
     hc.getContent()
-
