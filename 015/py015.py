@@ -32,7 +32,7 @@ class txtToXls(object):
         table = excel.add_sheet(self.filename)
 
         for i in range(len(self.jsondata)):
-            table.write(i, 0, i)
+            table.write(i, 0, i+1)
             table.write(i, 1, self.jsondata[str(i + 1)])
         excel.save(file_name)
 
