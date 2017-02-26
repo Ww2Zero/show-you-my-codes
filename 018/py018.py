@@ -55,4 +55,3 @@ if __name__ == '__main__':
     xx = xlsToXml()
     xx.loadXls('city.xls')
     xx.writeXml('city.xml')
-
